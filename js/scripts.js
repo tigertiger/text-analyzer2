@@ -19,7 +19,48 @@ function wordCounter(text) {
   });
   return wordCount;
 }
-  
+
+//Psuedo
+// function (text){
+
+//   const arr = text.split()
+//   ['word', 'words', 'word3', 'word']
+//   counter =
+//   first loop --> grabs the first word in your arr
+//   second loop --> check first word against every other word
+//   for(let i =0, ){
+//     for(let j=0)
+//   }
+// }
+
+// if the element matches index+1, then add to frequencyCount & move on.
+
+// const wordArray = text.split(" ");
+// let frequencyCount = 0;
+// wordArray.forEach(function(index) {
+//   if ( 0 === index +1) {
+//     frequencyCount++;
+//   }
+// }
+
+function mostCommonWords (text) {
+  const wordArray = text.split(" ");
+  let sortedArray = wordArray.sort();
+  let frequencyCount = 0;
+  word = wordArray[0]
+  const countedWords = []
+
+  sortedArray.forEach(function (element) {
+    if (element === word) {
+      frequencyCount++;
+    } else {
+     countedWords.push(word + " " + frequencyCount)
+     word = element 
+    }
+  })
+  countedWords.push(word + " " + frequencyCount)
+}
+
 
 function numberOfOccurrencesInText(word, text) {
   if (noInputtedWord(word, text)) {
